@@ -21,6 +21,66 @@
 
 body {
   background: var(--background);
+  overflow-x: hidden;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+@keyframes dimlight {
+  /* Keyframes للإيفيكت المتوهج: يغير اللون من أزرق داكن إلى أبيض مع ظل نصي */
+  0%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90.1%, 92% {
+    color: #0e3742; /* لون أزرق داكن */
+    box-shadow: none; /* بدون ظل */
+  }
+  18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 90%, 92.1%, 100% {
+    color: #fff; /* لون أبيض */
+    text-shadow: 0 0 10px #03bcf4; /* ظل نصي أزرق متوهج */
+  }
+}
+
+.coming-soon-effect {
+  /* كلاس لتطبيق إيفيكت "Coming Soon" على النصوص */
+  animation: dimlight 5s infinite; /* تشغيل الإيفيكت كل 5 ثواني بشكل متكرر */
+  letter-spacing: clamp(10px, 3vw, 12px); /* مسافة بين الحروف متجاوبة */
+  text-align: center; /* محاذاة النص في الوسط */
+  text-transform: uppercase; /* تحويل النص إلى أحرف كبيرة */
+  outline: none; /* إزالة الإطار الافتراضي */
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.zoom {
+  animation: zoomIn 3s ease-in-out infinite alternate; /* تكبير وتصغير متكرر */
+}
+
+@keyframes zoomIn2 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.zoom2 {
+  animation: zoomIn2 2s ease-in-out infinite alternate; /* تكبير وتصغير أكثر سرعة */
+}
+
+.zoom3 {
+ 
+  transition: transform .20s; /* Animation */
+  
+}
+
+.zoom3:hover {
+  transform: scale(1.02); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
