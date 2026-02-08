@@ -266,7 +266,7 @@ const [productCurrencySymbol, setProductCurrencySymbol] = useState("$");
         value={productCategoryId}
         onChange={e => setProductCategoryId(e.target.value)}
       >
-        <option value="">اختر قائمة</option>
+        <option value="">اختار قائمة</option>
         {leafCategories.map(c => (
           <option key={c.id} value={c.id}>
             {c.name}
