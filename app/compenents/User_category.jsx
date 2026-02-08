@@ -60,7 +60,7 @@ export default function User_category() {
 
   
   return (
-    <div className="flex justify-between  ">
+    <div className="flex justify-between ">
           <div className="flex w-full rounded-2xl m-4">
             <div className="p-6 w-full">
               <div className=" relative flex justify-between border-b-2 border-white mb-6 ">
@@ -83,7 +83,7 @@ export default function User_category() {
                         {showRlist ? 'إخفاء القائمة' : 'عرض القائمة'}
                         </button>
         
-                        <div className={`absolute top-fullleft-30 left-28    transition-all duration-200 ease-in-out ${showRlist ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
+                        <div className={`absolute top-full right-0   transition-all duration-200 ease-in-out ${showRlist ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
                             <Rlist/>
                         </div> 
                     </div>
